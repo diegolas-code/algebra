@@ -1,4 +1,4 @@
-## 2. Relaciones y combinatoria
+# 2. Relaciones y combinatoria
 Cuando formulamos una expresión que vincula o liga dos objetos entre si, en realidad estamos planteando una relación (no necesariamente matemática), es decir que una relación, es un vínculo entre dos objetos. Por ejemplo, 
 en una escuela cada estudiante está asignado a un curso.
 a cada país del mundo le corresponde al menos una capital. 
@@ -29,7 +29,7 @@ $(Tierra, 3), (Mercurio, 1), (Marte, 4), (Saturno, 6), (Venus, 2), (Júpiter, 5)
 
 En esta unidad, estudiaremos estas relaciones matemáticas y algunas propiedades de las mismas que dan lugar a algunos tipos de relaciones particulares.
 
-### 2.1 Producto cartesiano
+## 2.1 Producto cartesiano
 Un par ordenado es una pareja de objetos en la cual importa el orden de los mismos, formalmente, dados dos elementos cualesquiera $a$ y $b$, $(a, b)$ es el par ordenado con primera coordenada a y segunda coordenada b.
 
 Dos pares ordenados $(a, b)$ y $(a', b')$ serán iguales cuando sus primeras coordenadas son iguales y sus segundas coordenadas también lo son, es decir que:
@@ -53,7 +53,7 @@ Siguiendo de esta forma, los pares ordenados que tienen como primera coordenada 
 
 Finalmente, los pares ordenados que tiene como primera coordenada al elemento $4$ serán: $(4, a), (4, b), (4, c)$.
 
-### 2.2 Relaciones
+## 2.2 Relaciones
 Para poder definir el concepto de relación el concepto de producto cartesiano toma especial importancia, ya que dados dos conjuntos $A$ y $B$ dos conjuntos no vacíos, una relación de $A$ en $B$ es un subconjunto del producto cartesiano de $A \times B$. 
 
 Por ejemplo, si tomamos el producto cartesiano del ejemplo anterior
@@ -88,7 +88,7 @@ $R^ \{-1\} = \{(y, x): (x, y)∈R\}$
 
 Por ejemplo, sean $A = \{x: x$ *es un ser humano*$\}$, $B = \{y: y$ *es un gato*$\}$ y la relación $R$ *"$x$ es dueño de $y$"*, la relación inversa será *"$y$ es mascota de $x$"*.
 
-### 2.3 Propiedades de las relaciones
+## 2.3 Propiedades de las relaciones
 Sea $∼$ una relación en un conjunto $A$, esto es, una relación de $A$ en $A$, el conjunto de partida y el conjunto de llegada de $∼$ son el mismo conjunto $A$.
 
 La relación $∼$ se dice **reflexiva** si para todo $x ∈ A$ se verifica que
@@ -107,7 +107,7 @@ La relación $∼$ se dice **transitiva** si para todo $x ∈ A$, para todo $y �
 
 $(x ∼ y ∧ y ∼ z) \implies x ∼ z$
 
-### 2.4 Relaciones de orden y de equivalencia
+## 2.4 Relaciones de orden y de equivalencia
 
 Dijimos anteriormente que dependiendo de las propiedades que cumpliera una relación podríamos clasificarlas. En este sentido, existen dos grandes grupos de relaciones en los que haremos hincapié: las relaciones de orden y las relaciones de equivalencia. 
 
@@ -155,13 +155,13 @@ A cada elemento de una clase de equivalencia lo llamamos **representante** de di
 
 $A/R= \{[a]:a∈A\}$
 
-### 2.5 Combinatoria
+## 2.5 Combinatoria
 
 La combinatoria es una rama de las matemáticas que estudia las agrupaciones u ordenaciones de un determinado número de elementos, es decir que las técnicas de conteo son métodos matemáticos que permiten saber de cuántas formas distintas podemos seleccionar una cierta cantidad de objetos de un conjunto más grande.
 
 Problemas donde es necesario emplear técnicas de conteo se presentan frecuentemente en la vida real, por lo tanto conocer acerca de estas nos permitirá calcular cual es el número de posibilidades de que un evento suceda sin tener que realizar una lista de todos los posibles casos. 
 
-#### Principios básicos de conteo
+### Principios básicos de conteo
 
 En lo que respecta a las técnicas básicas de conteo hay dos principios que consideramos de importancia revisar: el **principio de la adición** y el **principio de la multiplicación**. Repasemos estos con unos ejemplos.
 
@@ -201,7 +201,7 @@ $C = 2 \cdot 3 \cdot 3$
 
 Aquí hemos aplicado el **PRINCIPIO MULTIPLICATIVO**. Este principio formalmente dice que si un suceso $A$ puede ocurrir de $m$ maneras e independientemente un segundo suceso $B$ puede ocurrir de $n$ maneras entonces el número de maneras en que ambos $A$ y $B$ pueden ocurrir es $m \cdot n$. 
 
-#### Permutaciones y combinaciones
+### Permutaciones y combinaciones
 
 Como dijimos al principio, la combinatoria se encarga de estudiar las agrupaciones u ordenaciones de un determinado número de elementos, existen varias formas de realizar estas agrupaciones teniendo en cuenta:
 
@@ -245,7 +245,7 @@ Ej.: $4! = 4 \cdot 3 \cdot 2 \cdot 1$
 
         $C((n+r-1),r)=\frac{n+r-1!}{(n-1)!\cdot r!}$
 
-#### Binomio de Newtor
+### Binomio de Newton
 
 El **Binomio de Newton** o **Teorema del Binomio**, es una fórmula que permite calcular de forma sencilla las potencias de un binomio $(a+b)^n$. La fórmula del binomio de Newton viene dada por la siguiente expresión:
 
