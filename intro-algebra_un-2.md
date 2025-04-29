@@ -7,7 +7,7 @@ En matemáticas, una relación trata de la correspondencia que existe entre dos 
 
 Por ejemplo, supongamos que queremos ordenar los planetas del sistema solar de menor a mayor distancia respecto al sol, estaremos relacionando los conjuntos
 
-$A = \{Tierra, Mercurio, Marte, Saturno Venus, Júpiter, Plutón, Urano, Neptuno\}$
+$A = \{Tierra, Mercurio, Marte, Saturno, Venus, Júpiter, Plutón, Urano, Neptuno\}$
 
 $B = \{1, 2, 3, 4, 5, 6, 7, 8, 9\}$
 
@@ -115,19 +115,19 @@ Dijimos anteriormente que dependiendo de las propiedades que cumpliera una relac
 
 Por ejemplo, sea $A = \{1,2,3\}$, definamos la relación $R = \{(1,1),(1,2),(1,3),(2,2),(2,3),(3,3)\}$. La relación es reflexiva ya que dado cualquier elemento $a$ de $A$, el par $(a,a)$ se encuentra en la relación. Además, notemos que la relación es antisimétrica ya que dado un par $(a,b)$ donde $a \neq b$, el par $(b,a)$ no se encuentra en la relación. Finalmente, la relación es transitiva pues: 
 
-$(1,1)∊R, (1,2)∊R \implies (1,2)∊R$
+$(1,1) \in R,\ (1,2) \in R \implies (1,2) \in R$
 
-$(1,1)∊R, (1,3)∊R \implies (1,3)∊R$
+$(1,1) \in R,\ (1,3) \in R \implies (1,3) \in R$
 
-$(1,2)∊R, (2,2)∊R \implies (1,2)∊R
+$(1,2) \in R,\ (2,2) \in R \implies (1,2) \in R$
 
-$(1,2)∊R, (2,3)∊R \implies (1,3)∊R$
+$(1,2) \in R,\ (2,3) \in R \implies (1,3) \in R$
 
-$(1,3)∊R, (3,3)∊R \implies (1,3)∊R$
+$(1,3) \in R,\ (3,3) \in R \implies (1,3) \in R$
 
-$(2,2)∊R, (2,3)∊R \implies (2,3)∊R$
+$(2,2) \in R,\ (2,3) \in R \implies (2,3) \in R$
 
-$(2,3)∊R, (3,3)∊R \implies (2,3)∊R$
+$(2,3) \in R,\ (3,3) \in R \implies (2,3) \in R$
 
 Por lo tanto podemos concluir que la relación $R$ *es una relación de orden*.
 
@@ -219,9 +219,65 @@ y por definición, $0!=1$.
 
 Ej.: $4! = 4 \cdot 3 \cdot 2 \cdot 1$
 
-#### Fórmulas de conteo
+### Fórmulas de conteo
 
-* **Permutaciones** *(importa el orden)*
+#### Permutaciones
+
+* **Permutaciones sin repetición**: Ordenaciones posibles de todos los elementos de un conjunto, sin repetir.
+
+    **Condición**: Todos los elementos son distintos.
+
+    **Fórmula**: $P(n) = n!$
+
+    **Ejemplo**: ¿Cuántas formas de ordenar las letras de "ROMA"?  
+  
+    $P(4) = 4! = 24$
+* **Permutaciones con repetición**: Ordenaciones de todos los elementos, pero algunos se repiten.
+
+    **Fórmula**: $P(n; k_1, k_2, \dots, k_m) = \frac{n!}{k_1! \cdot k_2! \cdot \dots \cdot k_m!}$
+
+    **Ejemplo**: ¿Cuántas formas de ordenar "MAMÁ"?  
+    
+    Letras: $M(2),A(2) \rightarrow \frac{4!}{2! \cdot 2!} = \frac{24}{4} = 6$
+  
+#### Variaciones
+
+* **Variaciones sin repetición**: Elegir y ordenar $r$ elementos distintos de un conjunto de $n$ elementos.
+
+    **Fórmula**: $V(n, r) = \frac{n!}{(n - r)!}$
+
+    **Ejemplo**: ¿Cuántos números de 3 cifras distintas se pueden formar con los dígitos del 1 al 9?
+    
+    $V(9, 3) = \frac{9!}{(9 - 3)!} = \frac{9!}{6!} = 504$
+
+* **Variaciones con repetición**: Elegir y ordenar $r$ elementos, permitiendo repetición.
+
+    **Fórmula**: $V_r(n) = n^r$
+
+    **Ejemplo**: ¿Cuántos números de 5 cifras se pueden formar con las cifras 1, 2 y 3?
+    
+    $V_5(3) = 3^5 = 243$
+
+#### Combinaciones
+
+* **Combinaciones sin repetición**: 
+Elegir $r$ elementos sin importar el orden, y sin repetición (también llamado **número combinatorio**).
+
+    **Fórmula**: $C(n, r) = \binom{n}{r} = \frac{n!}{r!(n - r)!}$
+
+    **Ejemplo**: ¿Cuántos equipos de 2 personas se pueden formar con 10 jugadores?
+    
+    $C(10, 2) = \frac{10!}{2! \cdot 8!} = 45$
+    
+* **Combinaciones con repetición**: Elegir $r$ elementos sin importar el orden, con posibilidad de repetir.
+
+    **Fórmula**: $C'(n, r) = \binom{n + r - 1}{r} = \frac{(n + r - 1)!}{r! \cdot (n - 1)!}$
+
+    **Ejemplo**: ¿Cuántas formas hay de elegir 3 frutas entre manzana, banana y pera (puede haber repetidas)?
+    
+    $C'(3, 3) = \binom{3 + 3 - 1}{3} = \frac{(3 + 3 - 1)!}{3! \cdot (3 - 1)!} = 10$
+
+<!-- * **Permutaciones** *(importa el orden)*
 
     Una permutación es una colección de elementos para los que se ha impuesto un ordenamiento.
     
@@ -243,10 +299,10 @@ Ej.: $4! = 4 \cdot 3 \cdot 2 \cdot 1$
 
     * **Combinaciones con repetición**: El número de subconjuntos de $r$ elementos de un conjunto de $n$ elementos distintos con repetición permitida es
 
-        $C((n+r-1),r)=\frac{n+r-1!}{(n-1)!\cdot r!}$
+        $C((n+r-1),r)=\frac{n+r-1!}{(n-1)!\cdot r!}$ -->
 
 ### Binomio de Newton
 
 El **Binomio de Newton** o **Teorema del Binomio**, es una fórmula que permite calcular de forma sencilla las potencias de un binomio $(a+b)^n$. La fórmula del binomio de Newton viene dada por la siguiente expresión:
 
-$(a+b)^{n}=\begin{pmatrix}n \\ 0\end{pmatrix}a^{n}b^{0}+\begin{pmatrix}n \\ 1\end{pmatrix}a^{n-1}b^{1}+\begin{pmatrix}n \\ 2\end{pmatrix}a^{n-2}b^{2}+\:...\:+\begin{pmatrix}n \\ n\end{pmatrix}a^{n-n=0}b^{n}$
+$(a+b)^{n}=\binom{n}{0}a^{n}b^{0}+\binom{n}{1}a^{n-1}b^{1}+\binom{n}{2}a^{n-2}b^{2}+\:...\:+\binom{n}{n}a^{n-n=0}b^{n}$
